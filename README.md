@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chuks Kitchen - Food Ordering & Customer Management System
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+**Chuks Kitchen** is a digital transformation project for Mr. Chukwudi Okorie (Mr. Chuks), aimed at digitizing his food business. This project converts a Figma UI design into a functional, responsive frontend application where customers can browse meals, place orders, and track their activity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository focuses on the frontend implementation, delivering a pixel-perfect representation of the designed interface with a focus on clean layout, responsiveness, and visual hierarchy.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Fonts:** Inter, Poppins, Jost, and Island Moments (via `@fontsource`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+The project follows the standard Next.js App Router organization:
 
-To learn more about Next.js, take a look at the following resources:
+- `app/`: Contains the main application routing and logic.
+  - `(authentication)/`: Login and Sign-up screens.
+  - `(public)/`: Main kitchen interface, explore page, and order tracking.
+  - `(welcome)/`: Landing and onboarding screens.
+  - `components/`: Reusable UI components (Cards, Layouts, Forms).
+  - `hooks/`: Custom React hooks for UI logic.
+  - `types/`: TypeScript definitions.
+- `public/`: Static assets including images and icons.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Interpretation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The conversion from Figma to code was executed with high fidelity, following these principles:
 
-## Deploy on Vercel
+- **Layout:** Replicated using a combination of **Flexbox** and **CSS Grid** to ensure precise alignment and spacing consistent with the Figma source.
+- **Hierarchy:** Maintained visual priority through careful use of typography sizes, font weights, and color contrast.
+- **Responsiveness:** Implemented a "Mobile-First" approach (where applicable) using Tailwind's responsive utilities to ensure the layout remains stable across different screen sizes.
+- **Interactions:** Subtle micro-animations were added using Framer Motion to enhance the "premium" feel of the interface.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Assumptions Made:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Missing Hover States: Defined interactive states for buttons and cards that were not explicitly detailed in the static Figma screens.
+- Empty States: Created basic empty state layouts for the orders and explore pages where mock data was unavailable.
+
+## Limitations & Improvements
+
+### Limitations
+
+- **No Backend:** This is a pure frontend demonstration. No real data is persisted, and no actual API calls are made.
+- **Static Flow:** Navigation is implemented, but state management for a shopping cart or user session is local and transient.
+- **Incomplete Screens:** 7 out of 12 screens were prioritized for this deliverable.
+
+### Future Improvements
+
+- **State Management:** Implement Redux or Zustand for complex cart and order logic.
+- **Dark Mode:** Add support for a dark theme using Tailwind's dynamic classes.
+- **Performance:** Optimize image assets and implement lazy loading for heavy component sections.
+- **Accessibility:** Conduct a full ARIA audit to ensure the application is screen-reader friendly.
+
+---
+
+_Developed for TrueMinds Innovations Ltd._
+# trueminds-chuks-kitchen
